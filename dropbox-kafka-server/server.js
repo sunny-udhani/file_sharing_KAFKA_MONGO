@@ -98,7 +98,7 @@ login_consumer.on('message', function (message) {
     console.log(JSON.stringify(message.value));
 
     var data = JSON.parse(message.value);
-console.log(data.data);
+    console.log(data.data);
     login.validateLogin(data.data, function (err, res) {
         console.log('after handle : ' + res + err);
 
@@ -904,7 +904,11 @@ listGroupMembers_consumer.on('message', function (message) {
             response_message.status = 400;
             response_message.err = err;
             response_message.data = null
-        } else {
+        } else if(res === null && err === null){
+            response_message.status = 400;
+            response_message.err = null;
+            response_message.data = null
+        }else {
             response_message.status = 200;
             response_message.err = null;
             response_message.data = res
@@ -940,7 +944,7 @@ listGroupMembers_consumer.on('message', function (message) {
 
 makeDirectory_consumer.on('offsetOutOfRange', function (err) {
     console.log(err);
-    makeDirectory_consumer.setOffset(topics.MAKE_DIRECTORY,0,0)
+    makeDirectory_consumer.setOffset(topics.MAKE_DIRECTORY, 0, 0)
 
 });
 

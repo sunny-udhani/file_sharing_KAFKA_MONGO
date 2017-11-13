@@ -1,8 +1,8 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var req_topics = require("topic_enum").req_topic_names;
-var res_topics = require("topic_enum").res_topic_names;
+var req_topics = require("./topic_enum").req_topic_names;
+var res_topics = require("./topic_enum").res_topic_names;
 var kafkaClient = require('../routes/kafka-client/kafkaClient');
 
 module.exports = function (passport) {

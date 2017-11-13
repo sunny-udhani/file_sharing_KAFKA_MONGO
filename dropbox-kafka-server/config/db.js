@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
 }
 
-mongoose.connect(dbURI, {useMongoClient: true, poolSize: 10});
+mongoose.connect(dbURI, {useMongoClient: true, poolSize: 2});
 
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function () {

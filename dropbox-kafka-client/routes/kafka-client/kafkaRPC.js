@@ -3,7 +3,7 @@ var kafka = require('kafka-node');
 var conn = require('./config/Connection');
 var response_topics = require('../../config/topic_enum').res_topic_names;
 
-var TIMEOUT = 8000; //time to wait for response in ms
+var TIMEOUT = 10000; //time to wait for response in ms
 var self = null;
 
 exports = module.exports = KafkaRPC;
@@ -582,7 +582,7 @@ KafkaRPC.prototype.setupResponseQueue = function (topic_name, next) {
             console.log(data.data);
 
             if (data.data.status === 400) {
-                entry.callback(data.data.err, null);
+                entry.callback(data.data, null);
             } else {
                 entry.callback(null, data.data)
             }

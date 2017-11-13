@@ -212,11 +212,11 @@ exports.fileUpload = function (req, res) {
 exports.listFiles = function (req, res) {
 
     if (req.session.username !== undefined || req.session.username !== "") {
-        console.log("file path -- " + req.body.filespath);
+        console.log("file path -- " + req.body.filesPath);
         console.log("share file path -- " + req.body.sharePath);
 
         var msg_payload = {
-            filepath: req.body.filespath,
+            filepath: req.body.filesPath,
             sharepath: req.body.sharePath,
             userId: req.session.userId,
             username: req.session.username
@@ -606,7 +606,7 @@ exports.createGroup = function (req, res) {
                     res.status(400).send();
                 }
                 else {
-                    res.status(200).send(result)
+                    res.status(400).send(result)
                 }
             });
 
@@ -615,7 +615,7 @@ exports.createGroup = function (req, res) {
             res.status(400).end();
         }
     } else {
-        res.status(500).send();
+        res.status(400).send();
     }
 };
 

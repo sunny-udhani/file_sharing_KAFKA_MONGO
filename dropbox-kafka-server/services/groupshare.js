@@ -283,6 +283,8 @@ exports.listGroupMembers = function (message, callback) {
                         }
                     })
                 }
+            }else{
+                callback(null,null);
             }
         }
     })
