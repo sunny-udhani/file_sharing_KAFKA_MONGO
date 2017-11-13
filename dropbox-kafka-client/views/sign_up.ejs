@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-offset-4 col-md-offset-4 col-lg-offset-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <!-- tabs -->
+                    <ul id="dTab" class="nav nav-tabs">
+                        <li><a href="/login" data-toggle="tab"><span class="glyphicon glyphicon-circle-arrow-right"></span>  Login</a></li>
+                    </ul>
+
+                    <div id="pane1" class="tab-pane fade in active">
+                        <form action="/registerUser" method="post">
+                            <fieldset>
+                                <div class="form-group">
+                                    <!-- User Name-->
+                                    <label class="control-label" for="userEmail">UserName</label>
+                                    <input type="email" id="userEmail" required name="userEmail" placeholder="Enter your email id" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <!-- Password-->
+                                    <label class="control-label" for="password">Password</label>
+                                    <input type="password" required id="password" name="password" placeholder="Enter Password" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- First Name-->
+                                    <label class="control-label" for="firstName">First Name</label>
+                                    <input type="text" id="firstName" required name="firstName" placeholder="Enter First Name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <!-- Last Name-->
+                                    <label class="control-label" for="lastName">Last Name</label>
+                                    <input type="text" required id="lastName" name="lastName" placeholder="Enter Last Name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <!-- DOB-->
+                                    <label class="control-label" for="dob">Date of Birth</label>
+                                    <input type="date" required id="dob" name="dob" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <!-- Gender-->
+                                    <label class="control-label" for="dob">Gender</label><br>
+                                    <input type="radio" id="genderChoice1"
+                                           name="gender" value="male">
+                                    <label class="control-label" for="genderChoice1">Male</label>
+
+                                    <input type="radio" id="genderChoice2"
+                                           name="gender" value="female">
+                                    <label class="control-label" for="genderChoice2">Female</label>
+
+                                    <input type="radio" id="genderChoice3"
+                                           name="gender" value="other">
+                                    <label class="control-label" for="genderChoice3">Other</label>
+
+                                    <input type="radio" id="genderChoice4"
+                                           name="gender" value="notSpecified">
+                                    <label class="control-label" for="genderChoice4">Prefer not to specify</label>
+                                </div>
+                                <input type="submit" value="Submit" class="btn btn-success">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

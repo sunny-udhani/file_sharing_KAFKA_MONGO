@@ -1,0 +1,41 @@
+{
+  "name": "dropbox-node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.17.1",
+    "busboy": "latest",
+    "client-sessions": "^0.8.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.3",
+    "directory-tree": "^2.0.0",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "express-session": "^1.15.6",
+    "form-data": "latest",
+    "fs-extra": "^4.0.2",
+    "glob": "^7.1.2",
+    "kafka-node": "^2.2.3",
+    "mocha": "^4.0.1",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.12.4",
+    "morgan": "~1.8.1",
+    "multer": "^1.3.0",
+    "mysql": "^2.14.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.83.0",
+    "serve-favicon": "~2.4.2",
+    "uuid": "^3.1.0"
+  }
+}
