@@ -5,9 +5,9 @@ A web application imitating features of dropbox with Apache Kafka for distribute
 
 ## Goal
 
-* The goal is to build a distributed enterprise web application which enables the user not only to upload , star/unstar or delete files but also share files to other users, create groups, add/edit/delete members and view their own activity timeline.
+* The goal is to build a distributed enterprise web application which enables the user not only to upload , star/unstar or delete files/folders but also share files/folders to other users, create groups, add/edit/delete members and view their own activity timeline.
 
-* We were tasked with this project requirement so that we can learn and develop enterprise service application and also non-relational databases.
+* We were tasked with this project requirement so that we can learn and develop enterprise service application with the use of non-relational databases.
 
 ## System Design
 
