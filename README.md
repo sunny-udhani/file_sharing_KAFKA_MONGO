@@ -15,9 +15,9 @@ A web application imitating features of dropbox with Apache Kafka for distribute
 
 My application includes 20+ kafka topics responsible to perform different activities. There are different consumers for each topic so that no one consumer gets overloaded with large number of requests on multiple topics. The system architecture is divided into 3 parts,
   
-  1.)	dropbox_react
-  2.)	dropbox-kafka-client
-  3.)	dropbox-kafka-server
+  *	dropbox_react
+  *	dropbox-kafka-client
+  *	dropbox-kafka-server
   
 Here, the kafka-client part only does the part of producing messages and on response from kafka-server forward it to react side.
 It also includes implementation of passportjs’s local strategy for authentication.  Sessions are stored in MongoDB and I have used express-sessions for session management.
